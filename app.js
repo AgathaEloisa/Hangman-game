@@ -1,15 +1,28 @@
 // Logica
-console.log(wordList)
+console.log(wordList);
+let incognitWord = [];
 
-let randomWord = wordList[Math.floor(Math.random()*wordList.length)];
+// Arroja una palabra al azar.
+const randomWord = wordList[Math.floor(Math.random()*wordList.length)];
 
+// Toma la palabra al azar y retorna en su lugar un arreglo de "_" con la misma longitud.
 let incognitRandomWord = (word) => {
-    let incognitWord = [];
 
    for(let i = 0; i < word.length; i++) {
        incognitWord.push(word[i]);
+       incognitWord[i] = '_';
    }
-   return incognitWord.join(' ') ;
+   return incognitWord.join(' ');
 }
 
-console.log(randomWord)
+
+let getId = (elem) => {
+    for(let i = 0; i < randomWord.length; i++) {
+        console.log('incognitWord :', incognitWord[i]);
+        if(elem.id === randomWord[i]) {
+            let changeLetter = incognitWord[i] = randomWord[i].toUpperCase();
+        }
+    }
+}
+
+console.log(randomWord);

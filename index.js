@@ -3,5 +3,7 @@
 // Imprimiendo palabra incognita en pantalla
 document.getElementById('unknown_word').innerHTML = `${incognitRandomWord(randomWord)}`;
 
-let letterValue = document.getElementById('letter').value;
-console.log(letterValue)
+for(let i = 0; i < alphabet.length; i++) {
+document.getElementById('root').innerHTML += `
+    <Button id="${alphabet[i]}" class="letter" value="${alphabet[i]}" onClick="getId(this)">${alphabet[i].toUpperCase()}</Button>
+`};
